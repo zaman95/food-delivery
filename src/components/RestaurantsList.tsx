@@ -60,7 +60,7 @@ export default function RestaurantsList({ restaurants }: restaurantListProps) {
               <div className='card-body'>
                 {/* Display restaurant name and restaurant type */}
                 <h6 className='card-title'>
-                  {item.name} - {item.restaurant}
+                  {item.name}
                 </h6>
                 <div className='bage-wraper'>
                   {/* Display star rating */}
