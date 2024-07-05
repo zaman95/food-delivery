@@ -1,43 +1,22 @@
-import React from "react"
+import React from 'react';
+import { categoryItem, categoryListProps } from '../types/FoodListing.type';
 
-export default function CategoriesList() {
+export default function CategoriesList({
+  categories,
+  selectedCategory,
+  handleCategoryChange,
+}: categoryListProps) {
   return (
     <ul className='tab-list'>
-      <li className='active'>
-        <a href='#' className='tab-item'>
-          All
-        </a>
-      </li>
-      <li>
-        <a href='#' className='tab-item'>
-          Suchsi
-        </a>
-      </li>
-      <li>
-        <a href='#' className='tab-item'>
-          Piza
-        </a>
-      </li>
-      <li>
-        <a href='#' className='tab-item'>
-          Burger
-        </a>
-      </li>
-      <li>
-        <a href='#' className='tab-item'>
-          Hot Meal
-        </a>
-      </li>
-      <li>
-        <a href='#' className='tab-item'>
-          Drinks
-        </a>
-      </li>
-      <li>
-        <a href='#' className='tab-item'>
-          Dessert
-        </a>
-      </li>
+      {categories?.map((item: categoryItem) => (
+        <li
+          key={item.id}
+          className={selectedCategory?.id === item.id ? 'active' : ''}
+          onClick={() => handleCategoryChange(item)}
+        >
+          <a className='tab-item'>{item.name}</a>
+        </li>
+      ))}
     </ul>
   );
 }
