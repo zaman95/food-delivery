@@ -8,16 +8,16 @@ body {
   min-height: 100vh;
 }
 .search-files {
-  max-width: 350px;
+  max-width: 400px;
   position: relative;
   margin-bottom: 2.5rem;
 }
 .search-files input {
   width: 100%;
-  padding: 12px 25px;
+  padding: 12px 12px 12px 40px;
   margin: 8px 0;
   display: inline-block;
-  border: 1px solid #ccc !important;
+  border: 1px solid #eeebeb !important;
   border-radius: 10px;
   box-sizing: border-box;
   font-size: 1rem;
@@ -25,9 +25,12 @@ body {
 }
 .search-files i {
   position: absolute;
-  left: 7px;
+  left: 16px;
   top: 23px;
-  color: #837f7f;
+  color: #b2b2b2;
+}
+.search-files ::placeholder {
+  color: #b2b2b2;
 }
 .tab-list {
   display: flex;
@@ -47,15 +50,19 @@ body {
   text-decoration: none;
   width: -webkit-fill-available;
   justify-content: center;
+  text-wrap: nowrap;
 }
-.tab-list .active a {
+
+.tab-list .active a,
+.tab-list li:hover a {
   background: #ffc700;
   color: black;
 }
+
 .tab-list li {
   border-left: 1px solid #ffc700;
   overflow: hidden;
-	cursor: pointer;
+  cursor: pointer;
 }
 .row-wraper {
   display: flex;
@@ -88,14 +95,14 @@ body {
   position: relative;
 }
 .row-wraper .card .img-wraper .img-bage {
-	min-width: 30px;
-	text-align: center;
+  min-width: 30px;
+  text-align: center;
   background: #ff696f;
   position: absolute;
   padding: 0.5rem 1rem;
   left: 0;
   top: 0;
-	border-bottom-right-radius: 1rem;
+  border-radius: 0.3rem;
   color: white;
 }
 .row-wraper .card h6 {
@@ -120,15 +127,26 @@ body {
 .row-wraper .bage-wraper span.new-bage {
   color: green;
 }
-.show-more-button {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  padding: 8px 16px;
-  font-weight: bold;
-  cursor: pointer;
-  color: #333;
+.text-ceter {
+  text-align: center;
+  margin-top: 2.5rem;
 }
+.show-more-button {
+  padding: 0.9rem 2rem;
+  border-radius: 1rem;
+  border: 1px solid #ffc700;
+  display: inline-block;
+  background-color: transparent;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #484343;
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+.show-more-button:hover {
+  background-color: #ffc700;
+}
+
 
 @media (max-width: 1024px) {
   .tab-list {

@@ -7,22 +7,24 @@ import { categoryItem, restaurantItem } from '../types/FoodListing.type';
 export default function FoodListing() {
   // State to store categories
   const [categories, setCategories] = useState<categoryItem[]>([]);
-  
+
   // State to store restaurants
   const [restaurants, setRestaurants] = useState<restaurantItem[]>([]);
-  
+
   // State to track the current page for pagination
   const [currentPage, setCurrentPage] = useState(1);
-  
+
   // State to store the number of items per page
   const [itemsPerPage] = useState(9);
-  
+
   // State to track the selected category
-  const [selectedCategory, setSelectedCategory] = useState<categoryItem | undefined>(undefined);
-  
+  const [selectedCategory, setSelectedCategory] = useState<
+    categoryItem | undefined
+  >(undefined);
+
   // State to track the search query input by the user
   const [searchQuery, setSearchQuery] = useState('');
-  
+
   // State to store the debounced search query
   const [debouncedSearchQuery, setDebouncedSearchQuery] = useState('');
 
@@ -100,9 +102,11 @@ export default function FoodListing() {
       />
       <RestaurantsList restaurants={currentRestaurants} />
       {currentRestaurants.length < filteredRestaurants.length && (
-        <button className='show-more-button' onClick={handleShowMore}>
-          + Show More
-        </button>
+        <div className='text-ceter'>
+          <button className='show-more-button' onClick={handleShowMore}>
+            + Show More
+          </button>
+        </div>
       )}
     </section>
   );
