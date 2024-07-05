@@ -1,0 +1,145 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+.section-wraper {
+  background: #f7f7f7;
+  padding: 1.5rem;
+  min-height: 100vh;
+}
+.search-files {
+  max-width: 350px;
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+.search-files input {
+  width: 100%;
+  padding: 12px 25px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc !important;
+  border-radius: 10px;
+  box-sizing: border-box;
+  font-size: 1rem;
+  min-height: 45px;
+}
+.search-files i {
+  position: absolute;
+  left: 7px;
+  top: 23px;
+  color: #837f7f;
+}
+.tab-list {
+  display: flex;
+  padding: 0;
+  border: 1px solid #dfd504;
+  border-radius: 10px;
+  width: fit-content;
+  list-style: none;
+  overflow: auto;
+  margin-bottom: 2rem;
+  /*	width: 100%;*/
+}
+.tab-list a {
+  padding: 1rem;
+  display: inline-flex;
+  font-size: 1rem;
+  color: gray;
+  text-decoration: none;
+  width: -webkit-fill-available;
+  justify-content: center;
+}
+.tab-list .active a {
+  background: #dfd504;
+  color: black;
+}
+.tab-list li {
+  border-left: 1px solid #dfd504;
+  overflow: hidden;
+}
+.tab-list li {
+  min-width: 130px;
+}
+.row-wraper {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -10px;
+}
+.row-wraper .col-4 {
+  margin: 10px;
+}
+.row-wraper .col-4 {
+  width: calc(33.33% - 20px);
+  margin-top: 1rem;
+}
+.row-wraper .col-4 .card-img {
+  width: 100%;
+  height: 20rem;
+  object-fit: cover;
+}
+.row-wraper .card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.row-wraper .card .card-body {
+  padding: 0.5rem;
+}
+
+.row-wraper .card .img-wraper {
+  position: relative;
+}
+.row-wraper .card .img-wraper .img-bage {
+  background: red;
+  position: absolute;
+  padding: 0.5rem 1rem;
+  left: 0;
+  top: 0;
+  border-radius: 0.3rem;
+  color: white;
+}
+.row-wraper .card h6 {
+  font-size: 1rem;
+  margin: 0.3rem 0;
+  margin-top: 1rem;
+  margin-left: 0.5rem;
+}
+
+.row-wraper .bage-wraper {
+  display: flex;
+  flex-wrap: wrap;
+}
+.row-wraper .bage-wraper span {
+  background: #f7f7f7;
+  padding: 0.5rem 1rem;
+  font-size: 14px;
+  border-radius: 10px;
+  margin: 5px;
+  color: gray;
+}
+.row-wraper .bage-wraper span.new-bage {
+  color: green;
+}
+
+@media (max-width: 1024px) {
+  .tab-list {
+    overflow: auto;
+    width: 100%;
+  }
+  .row-wraper .col-4 {
+    width: calc(50% - 20px);
+  }
+  .row-wraper .col-4 .card-img {
+    height: 15rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .row-wraper .col-4 {
+    width: 100%;
+  }
+  .search-files {
+    max-width: 100%;
+  }
+}
