@@ -9,7 +9,7 @@
 - [Installation](#installation)
 - [Usage](#usage)
 - [Tests](#tests)
-- [Project-Structure] (#project-structure)
+- [Project-Structure](#project-structure)
 
 ## Description
 
@@ -40,7 +40,7 @@ npm install
 ## Usage
 ```bash
 # Run the development server
-npm start
+npm run dev
 ```
 
 ## Tests
@@ -51,7 +51,7 @@ npm test
 ```
 
 ## Project Structure
-
+```bash
 food-delivery/
 │
 ├── public/
@@ -100,3 +100,4 @@ food-delivery/
 ├── README.md
 ├── package.json
 └── ...
+```
